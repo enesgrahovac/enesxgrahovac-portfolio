@@ -15,7 +15,7 @@ const LandingPageContent = ({ }: {}) => {
     const [showMenuBar, setShowMenuBar] = React.useState(false);
 
     return (
-        <PageLayout showStaticHeader={true} showMenu={showMenuBar}>
+        <PageLayout showStaticHeader={true}>
             <div className={styles.wrapper}>
                 <div className={styles.main}>
                     <div className={styles.intro}>
