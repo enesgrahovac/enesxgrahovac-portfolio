@@ -8,12 +8,11 @@ import ModalOpener, {
     ModalRegistry,
 } from "@/components/patterns/Modal/ModalOpener/ModalOpener";
 // import EmptyState from "@/components/patterns/EmptyState/EmptyState";
-import {useRouter, usePathname} from 'next/navigation'
+import { useRouter, usePathname } from 'next/navigation'
 const PageLayout = ({
     children,
     title = "BookQuest",
     showStaticHeader = false,
-    showMenu = true,
     footer,
     secondaryContent,
     onScrollToTop,
@@ -23,7 +22,6 @@ const PageLayout = ({
     title?: string;
     showHeader?: boolean;
     showStaticHeader?: boolean;
-    showMenu?: boolean;
     footer?: ReactElement;
     secondaryContent?: ReactElement;
     onScrollToTop?: () => void;
@@ -44,22 +42,45 @@ const PageLayout = ({
                     <div className={styles.header}>
                         <div className={styles.headerInner}>
                             <Header
-                                showMenu={showMenu}
                                 title="Enes Grahovac"
                                 actions={
-                                    <ModalOpener
-                                        modal={ modalToUse }
-                                        modalProps={ modalPropsToUse }
-                                    >
-                                        {(options) => (
-                                            <Button
-                                                variant="primary"
-                                                // icon={<Plus />}
-                                                label="🤝 Get in touch"
-                                                onClick={() => options.toggleModal(true)}
-                                            />
-                                        )}
-                                    </ModalOpener>
+                                    <div className={styles.actionsContainer}>
+                                        <Button
+                                            variant="ghost"
+                                            label="Projects"
+                                            onClick={() => {/* handle click */ }}
+                                        />
+                                        <Button
+                                            variant="ghost"
+                                            label="Principles"
+                                            onClick={() => {/* handle click */ }}
+                                        />
+                                        <Button
+                                            variant="ghost"
+                                            label="Resume"
+                                            onClick={() => {/* handle click */ }}
+                                        />
+                                        <Button
+                                            variant="ghost"
+                                            label="Blog"
+                                            onClick={() => {/* handle click */ }}
+                                        />
+                                        <ModalOpener
+                                            modal={modalToUse}
+                                            modalProps={modalPropsToUse}
+                                        >
+                                            {(options) => (
+                                                <Button
+                                                    variant="primary"
+                                                    label="🤝 Hire Me"
+                                                    onClick={() => {
+                                                        window.location.href =
+                                                            "/contact";
+                                                    }}
+                                                />
+                                            )}
+                                        </ModalOpener>
+                                    </div>
                                 }
                             />
                         </div>

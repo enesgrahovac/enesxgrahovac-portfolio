@@ -34,7 +34,7 @@ const LandingPageContent = ({ }: {}) => {
                             id={styles.lightGoals}
                         />
                         <div className={styles.exampleText}>
-                            <p>I'm currently working on bootstrapped AI web apps & looking for a full-time position as a software engineer.</p>
+                            <p>I'm currently working on boot-strapped AI web apps & looking for a full-time position as a software engineer.</p>
                         </div>
                     </div>
 

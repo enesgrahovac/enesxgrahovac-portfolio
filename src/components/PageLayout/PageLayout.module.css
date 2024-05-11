@@ -64,3 +64,9 @@
     display: none;
   }
 }
+
+.actionsContainer {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    gap: 10px; /* Space between buttons or elements */
+}
