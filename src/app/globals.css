@@ -32,7 +32,7 @@ h3 {
 
 a {
   text-decoration: underline;
-  color: var(--bq-maroon);
+  color: var(--enes-main);
   cursor: pointer;
 }
 
@@ -47,10 +47,10 @@ img {
 }
 
 :root {
-  --bq-maroon: #ad343e;
-  --bq-maroon-light: #ffc3ab;
-  --bq-maroon-faint: #ffe4d9;
-  --bq-maroon-x-faint: #fffbf9;
+  --enes-main: #ad343e;
+  --enes-main-light: #ffc3ab;
+  --enes-main-faint: #ffe4d9;
+  --enes-main-x-faint: #fffbf9;
   --ff-brown: #261c15;
   --ff-lime: #c5d86d;
   --ff-beige: #0d0d0a;
@@ -85,10 +85,10 @@ img {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bq-maroon: #e0724d;
-    --bq-maroon-light: #6e3d2f;
-    --bq-maroon-faint: #291713;
-    --bq-maroon-x-faint: #1a0a04;
+    --enes-main: #e0724d;
+    --enes-main-light: #6e3d2f;
+    --enes-main-faint: #291713;
+    --enes-main-x-faint: #1a0a04;
     --ff-brown: #a68c7f;
     --ff-lime: #b8c988;
     --ff-beige: #b0b29b;
@@ -151,7 +151,7 @@ select::placeholder {
 input:focus,
 textarea:focus,
 select:focus {
-  outline-color: var(--bq-maroon);
+  outline-color: var(--enes-main);
 }
 
 select {

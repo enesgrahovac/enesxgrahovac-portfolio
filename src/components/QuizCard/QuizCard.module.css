@@ -1,0 +1,93 @@
+.card {
+  width: 210px;
+  height: 350px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Aligns items with space between */
+  background-color: #fff; /* Assuming a white background for the cards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow for depth */
+}
+
+.iconContainer {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.bookIcon {
+  color: #333;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Starts content at the top */
+  flex-grow: 1;
+  padding: 16px;
+  text-align: left;
+}
+
+.titleContainer,
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content in the available space */
+}
+
+.titleContainer {
+  min-height: 4.8em; /* Height for two lines of title text */
+}
+
+.quizName {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0 8px 0; /* Removes margin for alignment */
+  height: 50px;
+  line-height: 1.2em; /* Ensures the line height matches the font size for alignment */
+  overflow: clip;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Limit text to two lines */
+  -webkit-box-orient: vertical;
+}
+
+.detailsContainer {
+  flex-grow: 1; /* Takes up remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* Distributes space around items */
+}
+
+.uploadDate,
+.quizScore,
+.progress {
+  font-size: 0.9em;
+  color: #333;
+  line-height: 1.4;
+  margin: 0 0 4px 0; /* Removes margin for alignment */
+}
+
+.buttonContainer {
+  display: flex;
+  padding: 16px; /* Padding to match the content area */
+  align-items: center; /* Centers the button vertically */
+  justify-content: center; /* Centers the button horizontally */
+}
+
+.button {
+  padding: 10px 20px;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for background color on hover */
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
