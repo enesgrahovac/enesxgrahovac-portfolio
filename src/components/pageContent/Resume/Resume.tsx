@@ -5,7 +5,7 @@ const ResumeEmbed = () => {
     return (
         <div style={{ width: '100%', height: '100vh' }}>
             <embed
-                src="/resume.pdf"
+                src="/GRAHOVAC_ENES_ML_ENGINEER_CV.pdf"
                 type="application/pdf"
                 width="100%"
                 height="100%"
