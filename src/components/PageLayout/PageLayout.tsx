@@ -58,7 +58,10 @@ const PageLayout = ({
                                         <Button
                                             variant="ghost"
                                             label="Resume"
-                                            onClick={() => {/* handle click */ }}
+                                            onClick={() => {
+                                                window.location.href =
+                                                    "/resume";
+                                            }}
                                         />
                                         <Button
                                             variant="ghost"
