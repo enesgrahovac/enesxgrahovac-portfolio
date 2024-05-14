@@ -9,6 +9,7 @@ import ModalOpener, {
 } from "@/components/patterns/Modal/ModalOpener/ModalOpener";
 // import EmptyState from "@/components/patterns/EmptyState/EmptyState";
 import { useRouter, usePathname } from 'next/navigation'
+import {useAppContext} from "@/contexts/AppContext";
 const PageLayout = ({
     children,
     title = "BookQuest",
@@ -32,8 +33,7 @@ const PageLayout = ({
     var mainContentRef = createRef<HTMLDivElement>();
     const [modalToUse, setModalToUse] = useState<any | null>(null);
     const [modalPropsToUse, setModalPropsToUse] = useState<any | null>(null);
-
-
+    const {isMobileDevice} = useAppContext();
 
     return (
         <div className={styles.container}>
@@ -43,31 +43,43 @@ const PageLayout = ({
                         <div className={styles.headerInner}>
                             <Header
                                 title="Enes Grahovac"
+                                showMenu={isMobileDevice}
                                 actions={
                                     <div className={styles.actionsContainer}>
-                                        <Button
-                                            variant="ghost"
-                                            label="Projects"
-                                            onClick={() => {/* handle click */ }}
-                                        />
-                                        <Button
-                                            variant="ghost"
-                                            label="Principles"
-                                            onClick={() => {/* handle click */ }}
-                                        />
-                                        <Button
-                                            variant="ghost"
-                                            label="Resume"
-                                            onClick={() => {
-                                                window.location.href =
-                                                    "/resume";
-                                            }}
-                                        />
-                                        <Button
-                                            variant="ghost"
-                                            label="Blog"
-                                            onClick={() => {/* handle click */ }}
-                                        />
+                                        <div className={`${isMobileDevice ? styles.hide : styles.actions}`}>
+                                            <Button
+                                                variant="ghost"
+                                                label="Projects"
+                                                onClick={() => {
+                                                    window.location.href =
+                                                        "/projects";
+                                                }}
+                                            />
+                                            <Button
+                                                variant="ghost"
+                                                label="Principles"
+                                                onClick={() => {
+                                                    window.location.href =
+                                                        "/principles";
+                                                }}
+                                            />
+                                            <Button
+                                                variant="ghost"
+                                                label="Resume"
+                                                onClick={() => {
+                                                    window.location.href =
+                                                        "/resume";
+                                                }}
+                                            />
+                                            <Button
+                                                variant="ghost"
+                                                label="Blog"
+                                                onClick={() => {
+                                                    window.location.href =
+                                                        "/blog";
+                                                }}
+                                            />
+                                        </div>
                                         <ModalOpener
                                             modal={modalToUse}
                                             modalProps={modalPropsToUse}

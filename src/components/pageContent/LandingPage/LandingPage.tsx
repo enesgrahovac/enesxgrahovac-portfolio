@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import PageLayout from "@/components/PageLayout/PageLayout";
+// import PageLayout from "@/components/PageLayout/PageLayout";
 import styles from "./LandingPage.module.css";
 import enesHeadshot from "@/public/img/headshot_presentation.png";
 // import books from "@/public/img/books_tall_1.png";
@@ -15,7 +15,7 @@ const LandingPageContent = ({ }: {}) => {
     const [showMenuBar, setShowMenuBar] = React.useState(false);
 
     return (
-        <PageLayout showStaticHeader={true}>
+        
             <div className={styles.wrapper}>
                 <div className={styles.main}>
                     <div className={styles.intro}>
@@ -31,7 +31,13 @@ const LandingPageContent = ({ }: {}) => {
                             src={enesHeadshot}
                             alt='A photo of Enes Grahovac from his DevDive talk on "how to train your own AI models in a Google Colaboratory notebook using a Huggingface model".'
                             className={styles.exampleImage}
-                            id={styles.lightGoals}
+                            id={styles.lightAllow}
+                        />
+                        <Image
+                            src={enesHeadshot}
+                            alt='A photo of Enes Grahovac from his DevDive talk on "how to train your own AI models in a Google Colaboratory notebook using a Huggingface model".'
+                            className={styles.exampleImage}
+                            id={styles.darkAllow}
                         />
                         <div className={styles.exampleText}>
                             <p>I'm currently working on boot-strapped AI web apps & looking for a full-time position as a software engineer.</p>
@@ -87,7 +93,6 @@ const LandingPageContent = ({ }: {}) => {
                     </div>
                 </div>
             </div>
-        </PageLayout>
     );
 };
 

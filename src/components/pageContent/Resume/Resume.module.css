@@ -123,3 +123,11 @@
     display: block;
   }
 }
+
+@media (max-width: 768px) {
+    .main {
+      max-width: 100%;
+      padding: 0 16px;
+    }
+  }
+  

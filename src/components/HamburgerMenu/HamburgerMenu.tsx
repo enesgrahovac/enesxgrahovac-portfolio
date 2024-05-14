@@ -31,7 +31,7 @@ const HamburgerMenu = () => {
             <div onClick={toggleMenu} className={classNames(styles.overlay, isMenuOpen ? styles.open : null)} >
                 <div className={classNames(styles.menu, isMenuOpen ? styles.open : null)}>
                     <Header
-                        title="BookQuest"
+                        title="Enes Grahovac"
                         actions={
                             <Button
                                 variant="ghost"
@@ -47,40 +47,45 @@ const HamburgerMenu = () => {
               </Link>
             </li> */}
                         <li>
-                            <Link href="/home">
-                                <Book /> My books
+                            <Link href="/projects">
+                                <Book /> Projects
                             </Link>
                         </li>
                         <li>
-                            <Link href="/settings">
-                                <Settings /> Settings
+                            <Link href="/resume">
+                                <Settings /> Resume
                             </Link>
                         </li>
                         <li>
-                            <a href="https://bookquest.canny.io/feature-requests" target="_blank">
-                                <Lightbulb /> Feature requests
+                            <a href="/principles" >
+                                <Book /> Principles
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/blog" >
+                                <Book /> Blog
                             </a>
                         </li>
                     </ul>
                     <div className={styles.divider} />
                     <ul>
                         <li className={styles.bTop}>
-                            <a href="mailto:bookquest.contact@gmail.com" target="_blank">
+                            <a href="mailto:enes.resume@gmail.com" target="_blank">
                                 <Mail />{" "}
                                 <div>
-                                    Contact<p>bookquest.contact@gmail.com</p>
+                                    Contact<p>enes.resume@gmail.com</p>
                                 </div>
                             </a>
                         </li>
                         <li>
-                            <a href="/landing" target="_blank">
-                                <Info /> About BookQuest
+                            <a href="/" >
+                                <Info /> About Me
                             </a>
                         </li>
                         {/* <li>
               <a
                 href="/blogs"
-                target="_blank"
+                
               >
                 <Newspaper /> Blog
               </a>

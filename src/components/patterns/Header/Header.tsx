@@ -1,12 +1,15 @@
 import React, { ReactElement } from "react";
 import styles from "./Header.module.css";
 import classNames from "classnames";
-import Link from 'next/link'; // Import Link from next/link
-
+import Button from "../Button/Button";
+import { Menu } from "lucide-react";
+import HamburgerMenu from "@/components/HamburgerMenu/HamburgerMenu";
+import Link from "next/link";
 interface HeaderProps extends React.HTMLAttributes<HTMLDivElement> {
     title: string;
     subtitle?: string | ReactElement;
     actions?: ReactElement;
+    showMenu?: boolean;
 }
 
 const Header = ({
@@ -14,6 +17,7 @@ const Header = ({
     subtitle,
     actions,
     className,
+    showMenu = false,
     ...rest
 }: HeaderProps) => {
     return (
@@ -21,13 +25,14 @@ const Header = ({
             <div
                 className={classNames(
                     styles.mainHeader,
+                    showMenu ? styles.offsetHeader : null
                 )}
             >
                 <div className={styles.titleAndMenu}>
+                    {showMenu && <HamburgerMenu />}
                     <Link href="/" passHref>
                         <h1>{title}</h1>
                     </Link>
-                    {/* <h1>{title}</h1> */}
                 </div>
                 {actions && <div className={styles.actionGroup}>{actions}</div>}
             </div>

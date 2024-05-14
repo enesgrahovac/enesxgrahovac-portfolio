@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import PageLayout from "@/components/PageLayout/PageLayout";
+// import PageLayout from "@/components/PageLayout/PageLayout";
 import styles from "./Contact.module.css";
 import enesHeadshot from "@/public/img/headshot_presentation.png";
 // import books from "@/public/img/books_tall_1.png";
@@ -15,13 +15,13 @@ const ContactContent = ({ }: {}) => {
     const [showMenuBar, setShowMenuBar] = React.useState(false);
 
     return (
-        <PageLayout showStaticHeader={true}>
+        // <PageLayout showStaticHeader={true}>
             <div className={styles.wrapper}>
                 <div className={styles.main}>
                     https://twitter.com/EnesGrahovac
                 </div>
             </div>
-        </PageLayout>
+        // </PageLayout>
     );
 };
 

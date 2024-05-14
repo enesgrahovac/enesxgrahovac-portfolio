@@ -1,3 +1,5 @@
+/* PageLayout.module.css */
+
 .container {
   display: flex;
   width: 100%;
@@ -60,13 +62,30 @@
 }
 
 @media (max-width: 800px) {
+  .mainContent {
+    width: 100%;
+    padding: 16px;
+  }
   .secondaryColumn {
+    display: none;
+  }
+  .actionsContainer.hide {
     display: none;
   }
 }
 
 .actionsContainer {
-    display: flex;
-    align-items: center; /* Align items vertically in the center */
-    gap: 10px; /* Space between buttons or elements */
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  gap: 10px; /* Space between buttons or elements */
+}
+
+.actionsContainer .hide {
+  display: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
