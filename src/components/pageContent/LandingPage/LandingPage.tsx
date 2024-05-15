@@ -82,8 +82,7 @@ const LandingPageContent = ({ }: {}) => {
                         <div className={styles.buttons}>
                             <Button
                                 variant="primary"
-                                label="🤝 Get in touch"
-                                // icon="🤝"
+                                label="🤝 Hire Me"
                                 onClick={() => {
                                     window.location.href =
                                         "/contact";

@@ -9,7 +9,7 @@ import ModalOpener, {
 } from "@/components/patterns/Modal/ModalOpener/ModalOpener";
 // import EmptyState from "@/components/patterns/EmptyState/EmptyState";
 import { useRouter, usePathname } from 'next/navigation'
-import {useAppContext} from "@/contexts/AppContext";
+import { useAppContext } from "@/contexts/AppContext";
 const PageLayout = ({
     children,
     title = "BookQuest",
@@ -33,7 +33,7 @@ const PageLayout = ({
     var mainContentRef = createRef<HTMLDivElement>();
     const [modalToUse, setModalToUse] = useState<any | null>(null);
     const [modalPropsToUse, setModalPropsToUse] = useState<any | null>(null);
-    const {isMobileDevice} = useAppContext();
+    const { isMobileDevice } = useAppContext();
 
     return (
         <div className={styles.container}>
@@ -80,21 +80,15 @@ const PageLayout = ({
                                                 }}
                                             />
                                         </div>
-                                        <ModalOpener
-                                            modal={modalToUse}
-                                            modalProps={modalPropsToUse}
-                                        >
-                                            {(options) => (
-                                                <Button
-                                                    variant="primary"
-                                                    label="🤝 Hire Me"
-                                                    onClick={() => {
-                                                        window.location.href =
-                                                            "/contact";
-                                                    }}
-                                                />
-                                            )}
-                                        </ModalOpener>
+
+                                        <Button
+                                            variant="primary"
+                                            label="🤝 Hire Me"
+                                            onClick={() => {
+                                                window.location.href =
+                                                    "/contact";
+                                            }}
+                                        />
                                     </div>
                                 }
                             />
