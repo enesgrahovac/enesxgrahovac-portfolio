@@ -1,28 +1,17 @@
-import React, { useEffect } from "react";
-// import PageLayout from "@/components/PageLayout/PageLayout";
+import React from "react";
 import styles from "./Contact.module.css";
-import enesHeadshot from "@/public/img/headshot_presentation.png";
-// import books from "@/public/img/books_tall_1.png";
-// import warAndPeace from "@/public/img/war_and_peace.png";
-import Image from "next/image";
-import Divider from "@/components/patterns/Divider/Divider";
-import Button from "@/components/patterns/Button/Button";
-import { Check, Plus, Send } from "lucide-react";
-import Link from "next/link";
 
-const ContactContent = ({ }: {}) => {
-    const [showCopiedMessage, setShowCopiedMessage] = React.useState(false);
-    const [showMenuBar, setShowMenuBar] = React.useState(false);
-
-    return (
-        // <PageLayout showStaticHeader={true}>
-            <div className={styles.wrapper}>
-                <div className={styles.main}>
-                    https://twitter.com/EnesGrahovac
-                </div>
-            </div>
-        // </PageLayout>
-    );
+const ContactContent = ({ }) => {
+  return (
+    <div className={styles.parent}>
+      <div className={styles.wrapper}>
+        <iframe
+          src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1bNOe1EK80hSxQobW7nuPI3UxVYqAKcV3mkyGhiEWGEuvNOoaQ1XQ2-Yu5lWUHfipK9Qc2R-X-?gv=true"
+          style={{ border: 0, width: '100%', height: '600px' }}
+        ></iframe>
+      </div>
+    </div>
+  );
 };
 
 export default ContactContent;
