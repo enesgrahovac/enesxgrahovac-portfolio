@@ -1,32 +1,21 @@
+// pages/resume.js
+import React from 'react';
 import { useAppContext } from "@/contexts/AppContext";
-import styles from "./Resume.module.css";
+import ResumeContent from './ResumeContent';
 
-const ResumeEmbed = () => {
-  return (
-    <div style={{ width: '100%', height: '100vh' }}>
-      <embed
-        src="/GRAHOVAC_ENES_ML_ENGINEER_CV.pdf"
-        type="application/pdf"
-        width="100%"
-        height="100%"
-      />
-    </div>
-  );
-};
-
-const ResumeContent = () => {
+const ResumePage = () => {
   const { isMobileDevice } = useAppContext();
   return (
     <div style={{ width: '100%', height: '100vh' }}>
-      {isMobileDevice ? (
+      {/* {isMobileDevice ? (
         <div style={{ textAlign: 'center', padding: '20px' }}>
           <p>To view my resume, please download it <a href="/GRAHOVAC_ENES_ML_ENGINEER_CV.pdf" download>here</a>.</p>
         </div>
-      ) : (
-        <ResumeEmbed />
-      )}
+      ) : ( */}
+        <ResumeContent />
+      {/* )} */}
     </div>
   );
 };
 
-export default ResumeContent;
+export default ResumePage;

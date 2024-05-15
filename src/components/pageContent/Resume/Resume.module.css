@@ -1,133 +1,128 @@
-.main {
-  max-width: 500px;
-  display: flex;
-  flex-direction: column;
-  gap: 64px;
-  flex: 1 1 auto;
+.container {
+    width: 95%;
+    margin: auto;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1 1 auto;
-  padding-top: 64px;
-  padding-bottom: 64px;
+.header {
+    color: #fff;
+    padding: 20px;
+    text-align: center;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
 }
 
-.intro p {
-  font-size: 13px;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: var(--ff-orange);
+.page {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    max-width: 900px;
 }
 
-.intro h1 {
-  font-size: 36px;
-  line-height: 1.1;
+.downloadBtn {
+    text-align: center;
+    margin: 20px 0;
 }
 
-.footer h1 {
-  font-size: 36px;
-  line-height: 1.1;
-  text-align: center;
+.downloadBtn a {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-.intro h2 {
-  font-size: 20px;
-  color: var(--fg-muted);
-  font-weight: 400;
+.main h1,
+.main h2,
+.main h3 {
+    color: #333;
+    margin: 0 0 10px;
 }
 
-.exampleSection {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.main p,
+.main ul {
+    margin-bottom: 10px;
+    font-size: 14px;
 }
 
-.exampleImage {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  border: 1px solid var(--border-base);
-  overflow: hidden;
-  box-shadow: var(--box-shadow);
+.main ul {
+    padding-left: 20px;
 }
 
-.exampleText {
-  padding: 0 32px;
-}
-
-.exampleText p {
-  text-align: center;
-  font-size: 20px;
-  color: var(--fg-base);
-  font-weight: 400;
+.main h3 span.right {
+    float: right;
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
-  gap: 48px;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 30px;
 }
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.buttons button {
-  padding: 24px;
-  border-radius: 100px;
-  font-size: 16px;
-}
-
-.logIn {
-  text-align: center;
-  padding: 0 24px;
-}
-
-#lightGoals,
-#lightBlock,
-#lightAllow,
-#lightDemo {
-  display: block;
-}
-
-#darkGoals,
-#darkBlock,
-#darkAllow,
-#darkDemo {
-  display: none;
+.footer p {
+    margin: 0;
 }
 
 @media (prefers-color-scheme: dark) {
-  #lightGoals,
-  #lightBlock,
-  #lightAllow,
-  #lightDemo {
-    display: none;
-  }
+    .header {
+        background: #222;
+        border-bottom: #555 3px solid;
+    }
 
-  #darkGoals,
-  #darkBlock,
-  #darkAllow,
-  #darkDemo {
-    display: block;
-  }
+    .main h1,
+    .main h2,
+    .main h3 {
+        color: #ccc;
+    }
+
+    .footer {
+        background: #222;
+    }
+
+    .page {
+        background: #333;
+        color: #fff;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    }
+
+    .downloadBtn a {
+        background-color: #fff;
+        color: #333;
+    }
 }
 
 @media (max-width: 768px) {
-    .main {
-      max-width: 100%;
-      padding: 0 16px;
+    .container {
+        width: 100%;
+        padding: 0 8px; /* Reduced padding to 8px */
+        box-sizing: border-box; /* Ensure padding is included within the width */
     }
-  }
-  
+    .page {
+        padding: 16px; /* Adjusted padding */
+        margin: 20px auto;
+        box-sizing: border-box; /* Ensure padding is included within the width */
+    }
+    .main h1 {
+        font-size: 18px; /* Further reduced */
+    }
+    .main h2 {
+        font-size: 14px; /* Further reduced */
+    }
+    .main h3 {
+        font-size: 12px; /* Further reduced */
+    }
+    .main p,
+    .main ul {
+        font-size: 10px; /* Further reduced */
+    }
+}
