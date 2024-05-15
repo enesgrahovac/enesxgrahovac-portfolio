@@ -48,8 +48,8 @@ img {
 
 :root {
   --enes-main: #ad343e;
-  --enes-main-light: #ffc3ab;
-  --enes-main-faint: #ffe4d9;
+  --enes-main-light: #ad343e;
+  --enes-main-faint: #a33f48;
   --enes-main-x-faint: #fffbf9;
   --ff-brown: #261c15;
   --ff-lime: #c5d86d;
@@ -85,9 +85,9 @@ img {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --enes-main: #e0724d;
-    --enes-main-light: #6e3d2f;
-    --enes-main-faint: #291713;
+    --enes-main: #ad343e;
+    --enes-main-light: #ad343e;
+    --enes-main-faint: #a33f48;
     --enes-main-x-faint: #1a0a04;
     --ff-brown: #a68c7f;
     --ff-lime: #b8c988;
