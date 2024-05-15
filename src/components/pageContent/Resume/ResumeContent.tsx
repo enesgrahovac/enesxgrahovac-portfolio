@@ -30,7 +30,7 @@ const ResumeContent = () => {
           <h2>Experience</h2>
 
           <h3>
-            {isMobileDevice ? "Sr. ML Engineer (NLP), Typpo" : "Senior Machine Learning Engineer (NLP), Typpo"} <span className={styles.right}>Q4 2022-Present</span>
+            {isMobileDevice ? "Sr. MLE (NLP), Typpo" : "Senior Machine Learning Engineer (NLP), Typpo"} <span className={styles.right}>Q4 2022-Present</span>
           </h3>
           <p>Typpo is the first voice-driven video creation tool, powered by AI.</p>
           <ul>

@@ -100,8 +100,33 @@
         color: #333;
     }
 }
+@media (max-width: 1000px) and (min-width: 441px) {
+    .container {
+        width: 100%;
+        padding: 0 12px; /* Slightly larger padding */
+        box-sizing: border-box; /* Ensure padding is included within the width */
+    }
+    .page {
+        padding: 20px; /* Adjusted padding */
+        margin: 20px auto;
+        box-sizing: border-box; /* Ensure padding is included within the width */
+    }
+    .main h1 {
+        font-size: 22px; /* Larger font size */
+    }
+    .main h2 {
+        font-size: 18px; /* Larger font size */
+    }
+    .main h3 {
+        font-size: 16px; /* Larger font size */
+    }
+    .main p,
+    .main ul {
+        font-size: 14px; /* Larger font size */
+    }
+}
 
-@media (max-width: 768px) {
+@media (max-width: 440px) {
     .container {
         width: 100%;
         padding: 0 8px; /* Reduced padding to 8px */
@@ -113,16 +138,16 @@
         box-sizing: border-box; /* Ensure padding is included within the width */
     }
     .main h1 {
-        font-size: 18px; /* Further reduced */
+        font-size: 19px; /* Further reduced */
     }
     .main h2 {
-        font-size: 14px; /* Further reduced */
+        font-size: 15px; /* Further reduced */
     }
     .main h3 {
-        font-size: 12px; /* Further reduced */
+        font-size: 13px; /* Further reduced */
     }
     .main p,
     .main ul {
-        font-size: 10px; /* Further reduced */
+        font-size: 11px; /* Further reduced */
     }
 }
