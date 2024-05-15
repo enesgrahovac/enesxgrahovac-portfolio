@@ -12,7 +12,7 @@ const ResumeContent = () => {
     <div className={styles.container}>
       <div className={styles.downloadBtn}>
         <Button
-          variant="primary"
+          variant="ghost"
           label="Download Resume"
           icon={<Download />}
           onClick={() => {

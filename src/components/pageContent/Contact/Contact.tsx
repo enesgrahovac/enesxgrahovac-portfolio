@@ -7,14 +7,23 @@ const ContactContent = ({ }: {}) => {
 
     return (
         <div className={styles.main}>
-            <Button
-                variant="primary"
-                label="Let's meet!"
-                icon={<Calendar />}
-                onClick={() => {
-                    window.open("https://calendar.app.google/FWkZ7TTygMtLs2PeA", "_blank");
-                }}
-            />
+            <div className={styles.intro}>
+                {/* <p>Meet Molla</p> */}
+                <h1>Let's chat 🤝</h1>
+                <h2>
+                    I'm opening to meeting to discuss new opportunities.
+                </h2>
+            </div>
+            <div className={styles.meetButton}  >
+                <Button
+                    variant="secondary"
+                    label="Let's meet!"
+                    icon={<Calendar />}
+                    onClick={() => {
+                        window.open("https://calendar.app.google/FWkZ7TTygMtLs2PeA", "_blank");
+                    }}
+                />
+            </div>
             <Divider />
             <div className={styles.intro}>
                 {/* <p>Meet Molla</p> */}

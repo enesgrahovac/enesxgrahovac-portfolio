@@ -20,6 +20,10 @@
     flex-direction: column;
     gap: 8px;
   }
+
+  .meetButton {
+    margin: 10px auto 10px
+  }
   
   .intro p {
     font-size: 13px;
