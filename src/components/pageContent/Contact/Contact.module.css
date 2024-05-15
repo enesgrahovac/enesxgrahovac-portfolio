@@ -4,6 +4,7 @@
     flex-direction: column;
     gap: 64px;
     flex: 1 1 auto;
+    margin:auto;
   }
   
   .wrapper {

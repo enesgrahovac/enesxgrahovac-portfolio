@@ -1,27 +1,45 @@
-import React, { useEffect } from "react";
-// import PageLayout from "@/components/PageLayout/PageLayout";
 import styles from "./Contact.module.css";
-import enesHeadshot from "@/public/img/headshot_presentation.png";
-// import books from "@/public/img/books_tall_1.png";
-// import warAndPeace from "@/public/img/war_and_peace.png";
-import Image from "next/image";
 import Divider from "@/components/patterns/Divider/Divider";
 import Button from "@/components/patterns/Button/Button";
-import { Check, Plus, Send } from "lucide-react";
-import Link from "next/link";
+import { Calendar, Twitter, LucideLinkedin } from "lucide-react";
 
 const ContactContent = ({ }: {}) => {
-    const [showCopiedMessage, setShowCopiedMessage] = React.useState(false);
-    const [showMenuBar, setShowMenuBar] = React.useState(false);
 
     return (
-        // <PageLayout showStaticHeader={true}>
-            <div className={styles.wrapper}>
-                <div className={styles.main}>
-                    https://twitter.com/EnesGrahovac
-                </div>
+        <div className={styles.main}>
+            <Button
+                variant="primary"
+                label="Let's meet!"
+                icon={<Calendar />}
+                onClick={() => {
+                    window.open("https://calendar.app.google/FWkZ7TTygMtLs2PeA", "_blank");
+                }}
+            />
+            <Divider />
+            <div className={styles.intro}>
+                {/* <p>Meet Molla</p> */}
+                <h1>Other ways to reach me 📥</h1>
+                <h2>
+                    Feel free to DM me through these platforms.
+                </h2>
             </div>
-        // </PageLayout>
+            <Button
+                variant="ghost"
+                label="Twitter (X)"
+                icon={<Twitter />}
+                onClick={() => {
+                    window.open("https://twitter.com/enesgrahovac", "_blank");
+                }}
+            />
+            <Button
+                variant="ghost"
+                label="LinkedIn"
+                icon={<LucideLinkedin />}
+                onClick={() => {
+                    window.open("https://www.linkedin.com/in/enes-grahovac-105/", "_blank");
+                }}
+            />
+        </div>
     );
 };
 
