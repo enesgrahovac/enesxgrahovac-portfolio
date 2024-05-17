@@ -32,7 +32,7 @@ const BlogsPageContent = async () => {
     return (
         <Pump
             draft={isDraftMode}
-            next={{ tags: ['basehub'] }}
+            next={{tags: ['basehub'], revalidate: 60}}
             queries={[
                 {
                     blog: {
@@ -62,9 +62,7 @@ const BlogsPageContent = async () => {
                     notFound()
                     return null; // Ensure not to proceed
                 } 
-                
-                console.log('Data:', data.blog.posts)
-                
+                                
                 const items = data.blog.posts.items;
 
                 // Validate and ensure `items` is an array of PostItem
