@@ -47,24 +47,9 @@ const HamburgerMenu = () => {
               </Link>
             </li> */}
                         <li>
-                            <Link href="/projects">
-                                <Book /> Projects
-                            </Link>
-                        </li>
-                        <li>
                             <Link href="/resume">
                                 <Settings /> Resume
                             </Link>
-                        </li>
-                        <li>
-                            <a href="/principles" >
-                                <Book /> Principles
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/blog" >
-                                <Book /> Blog
-                            </a>
                         </li>
                     </ul>
                     <div className={styles.divider} />
