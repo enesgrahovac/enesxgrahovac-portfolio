@@ -19,7 +19,6 @@ const LandingPageContent = ({ }: {}) => {
             <div className={styles.wrapper}>
                 <div className={styles.main}>
                     <div className={styles.intro}>
-                        {/* <p>Meet Molla</p> */}
                         <h1>Hello, I'm Enes 👋</h1>
                         <h2>
                             I'm a software engineer with a passion for creating practical things that use Artificial Intelligence and Machine Learning to solve real-world problems.

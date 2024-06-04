@@ -61,11 +61,11 @@ const HamburgerMenu = () => {
                                 <Book /> Principles
                             </a>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="/blog" >
                                 <Book /> Blog
                             </a>
-                        </li>
+                        </li> */}
                     </ul>
                     <div className={styles.divider} />
                     <ul>

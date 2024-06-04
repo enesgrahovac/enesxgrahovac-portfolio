@@ -49,6 +49,14 @@ const PageLayout = ({
                                         <div className={`${isMobileDevice ? styles.hide : styles.actions}`}>
                                             <Button
                                                 variant="ghost"
+                                                label="Resume"
+                                                onClick={() => {
+                                                    window.location.href =
+                                                        "/resume";
+                                                }}
+                                            />
+                                            <Button
+                                                variant="ghost"
                                                 label="Projects"
                                                 onClick={() => {
                                                     window.location.href =
@@ -63,22 +71,15 @@ const PageLayout = ({
                                                         "/principles";
                                                 }}
                                             />
-                                            <Button
-                                                variant="ghost"
-                                                label="Resume"
-                                                onClick={() => {
-                                                    window.location.href =
-                                                        "/resume";
-                                                }}
-                                            />
-                                            <Button
+
+                                            {/* <Button
                                                 variant="ghost"
                                                 label="Blog"
                                                 onClick={() => {
                                                     window.location.href =
                                                         "/blog";
                                                 }}
-                                            />
+                                            /> */}
                                         </div>
 
                                         <Button

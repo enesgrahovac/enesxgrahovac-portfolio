@@ -1,0 +1,73 @@
+/* PrinciplesPageContent.module.css */
+
+.card {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    border: 1px solid #eaeaea; /* Add border */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Add transition effect */
+}
+
+.card:hover {
+    transform: translateY(-4px); /* Add slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.imageWrapper {
+    position: relative;
+    height: 12rem;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.content {
+    padding: 1rem;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: var(--enes-main); /* Primary color */
+}
+
+.date {
+    color: gray;
+    font-size: 0.875rem;
+    margin-bottom: 0.5rem;
+}
+
+.excerpt {
+    color: #4a4a4a;
+}
+
+.readMore {
+    margin-top: 1rem;
+    color: var(--enes-main); /* Primary color */
+    text-decoration: none;
+}
+
+.readMore:hover {
+    text-decoration: underline;
+}
+
+.gridContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem; /* Adjust the gap between the cards as needed */
+  }
+
+@media (min-width: 640px) {
+    .gridContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .gridContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
