@@ -1,16 +1,17 @@
 
-import { RichText } from 'basehub/react-rich-text';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { usePathname } from 'next/navigation';
 import Markdown from 'react-markdown'
 import { Pump } from 'basehub/react-pump'
+import styles from './PrinciplePage.module.css'
+import { RichText } from "basehub/react-rich-text"
 
 type PrinciplePageProps = {
     slug: string;
 }
 
 
-const PrinciplePage: React.FC<PrinciplePageProps> = (slug) => {
+const PrinciplePage: React.FC<PrinciplePageProps> = ({slug}) => {
     console.log(slug, "context");
     // const slug = "meditate"
     return (
@@ -22,13 +23,13 @@ const PrinciplePage: React.FC<PrinciplePageProps> = (slug) => {
                     principles: {
                         __args: { 
                             filter: { 
-                              _slug: { eq: slug },
+                              _sys_slug: {eq: slug},
                             },
                           },
                         items: {
                             _id: true,
                             content: {
-                                markdown: true,
+                                json: {content:true},
                             },
                             _title: true,
                             _slug: true,
@@ -39,17 +40,23 @@ const PrinciplePage: React.FC<PrinciplePageProps> = (slug) => {
             >
                 {async ([data]) => {
                     'use server'
-                    console.log('PrinciplesPageContent:', data)
                     if (!data.principles || data.principles.items.length === 0) {
                         return null; // Ensure not to proceed
                     }
 
                     const [principleData] = data.principles.items;
-
+                    console.log(principleData.content?.json.content, "principleData")
                     return (
-                        <div>
-                            <h1>{principleData._title}</h1>
-                            {principleData.content?.markdown && <Markdown>{principleData.content.markdown}</Markdown>}
+                        <div className={styles.principlePage}>
+                            <div className={styles.principleHeader}> <h1>{principleData._title}</h1> </div>
+                            
+                            {/* {principleData.content?.markdown && <Markdown className={styles.markdown}>{principleData.content.markdown}</Markdown>} */}
+                            {
+                                principleData.content?.json.content && 
+                                <div className={styles.richText}>
+                                    <RichText>{principleData.content.json.content}</RichText>
+                                </div>
+                            }
                         </div>
                     )
                 }}

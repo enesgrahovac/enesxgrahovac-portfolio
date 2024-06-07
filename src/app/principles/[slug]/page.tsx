@@ -1,17 +1,24 @@
 import PrinciplePage from '@/components/pageContent/PrinciplePage/PrinciplePage';
-import { GetStaticProps, GetStaticPaths } from 'next';
-
+// import { GetStaticProps, GetStaticPaths } from 'next';
+// import { useParams } from 'next/navigation';
 
 type PrinciplePageProps = {
-  title: string;
-  content: string | undefined;
+  params: {
+    slug: string;
+  };
 };
 
-export default function PrinciplePageRender({  }: PrinciplePageProps) {
-    const slug = "meditate"
+export default function PrinciplePageRender({ params }: PrinciplePageProps) {
+  const { slug } = params;
+  console.log(params)
+  // Ensure slug is available before rendering
+  if (!slug || typeof slug !== 'string') {
+    return <div>Loading...</div>;
+  }
+
   return (
     <main>
-      <PrinciplePage slug={slug}/>
+      <PrinciplePage slug={slug} />
     </main>
   );
 }

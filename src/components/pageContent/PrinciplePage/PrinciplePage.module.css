@@ -1,0 +1,22 @@
+/* PrinciplePage.module.css */
+
+.principlePage {
+    margin: 0 auto;
+    width: 66.67%; /* This makes the container take 2/3 of the screen width */
+}
+
+/* Apply some spacing to all <p> tags */
+.richText p {
+    margin-bottom: 1em; /* Adds a margin below all <p> elements */
+}
+
+/* Additional styling to visually handle empty <p> tags */
+.richText p:empty::before {
+    content: '\00A0'; /* Adds a non-breaking space character */
+    display: block;
+    height: 1em; /* Adjust this value based on desired spacing */
+}
+
+.principleHeader {
+    margin-bottom: 2rem; /* Adds space below the header */
+}
