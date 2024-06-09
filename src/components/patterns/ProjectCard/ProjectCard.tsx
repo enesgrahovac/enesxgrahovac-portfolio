@@ -9,9 +9,10 @@ type ProjectCardProps = {
     coverImage: string | undefined;
     content: string | undefined;
     projectStartDate: string | null;
+    slug: string;
 };
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, coverImage, content, projectStartDate }) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, coverImage, content, projectStartDate, slug }) => {
     /*
      * Add type checks and console logs for better debugging. 
      * It's critical to check the shape and type of `content` and `projectStartDate`.
@@ -42,7 +43,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, coverImage,
                     </div>
                 )}
                 <div className={styles.readMore}>
-                    <Link href={`/projects/${id}`} className={styles.readMore}>
+                    <Link href={`/projects/${slug}`} className={styles.readMore}>
                         Read more
                     </Link>
                 </div>

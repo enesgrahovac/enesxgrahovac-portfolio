@@ -10,7 +10,7 @@ const ContactContent = ({ }: {}) => {
             <div className={styles.intro}>
                 <h1>Let's chat 🤝</h1>
                 <h2>
-                    I'm opening to meeting to discuss new opportunities.
+                    I'm open to meeting to discuss new opportunities.
                 </h2>
             </div>
             <div className={styles.meetButton}  >

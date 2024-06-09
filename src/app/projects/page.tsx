@@ -1,5 +1,6 @@
+"use server"
 import ProjectsPageContent from "@/components/pageContent/AllProjectsPage/ProjectsPageContent";
-export default function Home() {
+export default async function Home() {
   return (
     <main>
         <ProjectsPageContent />

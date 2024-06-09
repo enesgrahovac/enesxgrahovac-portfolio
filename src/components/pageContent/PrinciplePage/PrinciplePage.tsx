@@ -1,7 +1,4 @@
 
-import { GetStaticProps, GetStaticPaths } from 'next';
-import { usePathname } from 'next/navigation';
-import Markdown from 'react-markdown'
 import { Pump } from 'basehub/react-pump'
 import styles from './PrinciplePage.module.css'
 import { RichText } from "basehub/react-rich-text"
@@ -10,10 +7,7 @@ type PrinciplePageProps = {
     slug: string;
 }
 
-
-const PrinciplePage: React.FC<PrinciplePageProps> = ({slug}) => {
-    console.log(slug, "context");
-    // const slug = "meditate"
+const PrinciplePage: React.FC<PrinciplePageProps> = ({ slug }) => {
     return (
         <div>
             <Pump
@@ -21,15 +15,15 @@ const PrinciplePage: React.FC<PrinciplePageProps> = ({slug}) => {
                 next={{ tags: ['basehub'], revalidate: 1 }}
                 queries={[{
                     principles: {
-                        __args: { 
-                            filter: { 
-                              _sys_slug: {eq: slug},
+                        __args: {
+                            filter: {
+                                _sys_slug: { eq: slug },
                             },
-                          },
+                        },
                         items: {
                             _id: true,
                             content: {
-                                json: {content:true},
+                                json: { content: true },
                             },
                             _title: true,
                             _slug: true,
@@ -49,10 +43,8 @@ const PrinciplePage: React.FC<PrinciplePageProps> = ({slug}) => {
                     return (
                         <div className={styles.principlePage}>
                             <div className={styles.principleHeader}> <h1>{principleData._title}</h1> </div>
-                            
-                            {/* {principleData.content?.markdown && <Markdown className={styles.markdown}>{principleData.content.markdown}</Markdown>} */}
                             {
-                                principleData.content?.json.content && 
+                                principleData.content?.json.content &&
                                 <div className={styles.richText}>
                                     <RichText>{principleData.content.json.content}</RichText>
                                 </div>

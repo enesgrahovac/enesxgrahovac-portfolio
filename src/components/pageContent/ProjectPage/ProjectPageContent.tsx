@@ -1,90 +1,62 @@
-import { basehub } from 'basehub'
+
 import { Pump } from 'basehub/react-pump'
-import { RichText } from 'basehub/react-rich-text'
-import { Metadata } from 'next'
-import { draftMode } from 'next/headers'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import { Suspense } from 'react'
-import { ProjectCard } from '@/components/patterns/ProjectCard/ProjectCard'
-import styles from './ProjectsPageContent.module.css'
+import styles from './ProjectPageContent.module.css'
+import { RichText } from "basehub/react-rich-text"
 
-type ProjectItem = {
-    _id: string;
-    _title: string;
-    coverImage: { url: string; rawUrl: string } | null;
-    content: { markdown: string };
-    projectStartDate: string | null;
-};
-
-// Type guard for ProjectItem
-function isProjectItem(item: any): item is ProjectItem {
-    return item && typeof item._id === 'string' && typeof item._title === 'string';
+type ProjectPageProps = {
+    slug: string;
 }
 
-// Type guard for ProjectItem array
-function isProjectItemArray(items: any): items is ProjectItem[] {
-    return Array.isArray(items) && items.every(isProjectItem);
-}
 
-const ProjectsPageContent = async () => {
-    const { isEnabled: isDraftMode } = draftMode()
+const ProjectPage: React.FC<ProjectPageProps> = ({slug}) => {
 
     return (
-        <Pump
-        
-            draft={isDraftMode}
-            next={{ tags: ['basehub'], revalidate: 60 }}
-            queries={[{
-                projects: {
-                  items: {
-                    _id: true,
-                    content: {
-                      markdown: true,
+        <div className={styles.projectPageContent}>
+            <Pump
+                draft={false}
+                next={{ tags: ['basehub'], revalidate: 1 }}
+                queries={[{
+                    projects: {
+                        __args: { 
+                            filter: { 
+                              _sys_slug: {eq: slug},
+                            },
+                          },
+                        items: {
+                            _id: true,
+                            content: {
+                                json: {content:true},
+                            },
+                            _title: true,
+                            _slug: true,
+                        }
                     },
-                    _title: true,
-                    coverImage: {
-                      rawUrl: true,
-                    },
-                    projectStartDate:true
-                  },
-                },
-              }]}
-        >
-            {async ([data]) => {
-                'use server'
+                }]}
+            >
+                {async ([data]) => {
+                    'use server'
+                    if (!data.projects || data.projects.items.length === 0) {
+                        return null; // Ensure not to proceed
+                    }
 
-                if (!data.projects) {
-                    notFound()
-                    return null; // Ensure not to proceed
-                } 
-                console.log(data)
+                    const [projectData] = data.projects.items;
+                    console.log(projectData.content?.json.content, "projectData")
+                    return (
+                        <div className={styles.principlePage}>
+                            <div className={styles.principleHeader}> <h1>{projectData._title}</h1> </div>
+                            
+                            {
+                                projectData.content?.json.content && 
+                                <div className={styles.richText}>
+                                    <RichText>{projectData.content.json.content}</RichText>
+                                </div>
+                            }
+                        </div>
+                    )
+                }}
+            </Pump>
+        </div>
+    );
+};
 
-                const projectsData = data.projects.items
-
-                if (!isProjectItemArray(projectsData)) {
-                    console.error('Expected items to be an array of PostItem but got:', projectsData);
-                    notFound();
-                    return null; // Ensure not to proceed
-                }
-
-                return (
-                    <div className={styles.gridContainer}>
-                        {projectsData.map((project) => (
-                            <ProjectCard
-                                key={project._id}
-                                id={project._id}
-                                title={project._title}
-                                coverImage={project.coverImage?.rawUrl}
-                                content={project.content?.markdown}
-                                projectStartDate={project.projectStartDate}
-                            />
-                        ))}
-                    </div>
-                )
-            }}
-        </Pump>
-    )
-}
-
-export default ProjectsPageContent
+export default ProjectPage;

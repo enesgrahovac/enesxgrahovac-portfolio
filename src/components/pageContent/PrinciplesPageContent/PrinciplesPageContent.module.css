@@ -71,3 +71,26 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
+
+.whatAndWhy {
+    padding: 10px 0 10px 0;
+}
+
+.whatAndWhy h1{
+    padding: 0 0 10px 0;
+}
+
+.whatAndWhy p{
+    padding: 0 0 10px 30px;
+    font-size: large;
+}
+
+.principlesDisplay {
+
+}
+
+
+.principlesDisplay h1 {
+    padding: 10px 0 10px 0;
+
+}

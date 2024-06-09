@@ -27,68 +27,6 @@ function isProjectItemArray(items: any): items is ProjectItem[] {
     return Array.isArray(items) && items.every(isProjectItem);
 }
 
-// export const generateMetadata = async ({
-//   params,
-// }: {
-//   params: { slug: string }
-// }): Promise<Metadata> => {
-//   const { isEnabled: isDraftMode } = draftMode()
-//   const data = await basehub({
-//     next: { tags: ['basehub'] },
-//     draft: isDraftMode,
-//   }).query({
-//     index: {
-//       postsSection: {
-//         posts: {
-//           __args: {
-//             filter: {
-//               _sys_slug: { eq: params.slug },
-//             },
-//           },
-//           items: {
-//             _title: true,
-//             date: true,
-//             body: {
-//               plainText: true,
-//             },
-//           },
-//         },
-//       },
-//     },
-//   })
-
-//   const post = data.index.postsSection.posts.items[0]
-
-//   if (!post) notFound()
-
-//   return {
-//     title: post._title,
-//     description: post.body.plainText.split(' ').slice(0, 24).join(' ') + '...',
-//   }
-// }
-
-// export const generateStaticParams = async () => {
-//   const data = await basehub({ cache: 'no-store' }).query({
-//     index: {
-//       postsSection: {
-//         posts: {
-//           items: {
-//             _slug: true,
-//           },
-//         },
-//       },
-//     },
-//   })
-
-//   return data.index.postsSection.posts.items.map((post:any) => {
-//     return {
-//       params: {
-//         slug: post._slug,
-//       },
-//     }
-//   })
-// }
-
 const ProjectsPageContent = async () => {
     const { isEnabled: isDraftMode } = draftMode()
 
@@ -108,7 +46,8 @@ const ProjectsPageContent = async () => {
                     coverImage: {
                       rawUrl: true,
                     },
-                    projectStartDate:true
+                    projectStartDate:true,
+                    _slug: true,
                   },
                 },
               }]}
@@ -140,6 +79,7 @@ const ProjectsPageContent = async () => {
                                 coverImage={project.coverImage?.rawUrl}
                                 content={project.content?.markdown}
                                 projectStartDate={project.projectStartDate}
+                                slug={project._slug}
                             />
                         ))}
                     </div>
