@@ -84,7 +84,6 @@ const PrinciplesPageContent = async () => {
                             return null; // Ensure not to proceed
                         }
 
-                        console.log("data", data)
 
                         const projectsData = data.principles.items
 
