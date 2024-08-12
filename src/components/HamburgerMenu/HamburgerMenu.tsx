@@ -48,14 +48,14 @@ const HamburgerMenu = () => {
             </li> */}
                         <li>
                             <Link href="/resume">
-                                <Settings /> Resume
+                                <Book /> Resume
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="/principles" >
                                 <Book /> Principles
                             </a>
-                        </li>
+                        </li> */}
                         {/* <li>
                             <a href="/blog" >
                                 <Book /> Blog

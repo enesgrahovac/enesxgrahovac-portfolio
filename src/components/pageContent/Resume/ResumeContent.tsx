@@ -13,7 +13,7 @@ const ResumeContent = () => {
             <div className={styles.downloadBtn}>
                 <Button
                     variant="ghost"
-                    label="Download Resume"
+                    label="Download resume"
                     icon={<Download />}
                     onClick={() => {
                         window.open("/GRAHOVAC_ENES_ML_ENGINEER_CV.pdf", "_blank");
@@ -50,11 +50,17 @@ const ResumeContent = () => {
                             – AI-powered site-blocker that uses intelligence to keep you focused on the internet.
                         </li>
                         <li>
+                            <a href="https://teleprompter-neon.vercel.app/" target="_blank" rel="noopener noreferrer">
+                                The Teleprompter
+                            </a>{' '}
+                            – A tool to help Audiobook Narrators/Engineers create audiobooks faster and more efficiently.
+                        </li>
+                        {/* <li>
                             <a href="https://phonegpt.app/" target="_blank" rel="noopener noreferrer">
                                 PhoneGPT
                             </a>{' '}
                             – First app to call and talk with ChatGPT using Phone Call. Added SMS next.
-                        </li>
+                        </li> */}
 
                         <li>
                             <a href="https://book-quest.com/" target="_blank" rel="noopener noreferrer">
@@ -62,7 +68,7 @@ const ResumeContent = () => {
                             </a>{' '}
                             – AI that creates courses and quizzes from any novel, textbook, and book.
                         </li>
-                        <li>FaceR – Doorlock using 3D facial recognition models to unlock. Built hardware and ML models.</li>
+                        {/* <li>FaceR – Doorlock using 3D facial recognition models to unlock. Built hardware and ML models.</li> */}
                     </ul>
 
                     <h3>
@@ -122,10 +128,11 @@ const ResumeContent = () => {
                     </ul>
 
                     <h2>Skills</h2>
-                    <p>Python, TypeScript, PyTorch, Tensorflow, Numpy, Pandas, NextJS, Vercel, SQL, Web Scraping, GCP, AWS</p>
+                    <p>Python, TypeScript, PyTorch, React.JS, Tensorflow, Numpy, Pandas, Next.JS, Vercel, SQL, Web Scraping, GCP, AWS</p>
 
                     <h2>Awards and Recognition</h2>
                     <ul>
+                        <li>Dale Carnegie Course Completion Certificate - April 2023</li>
                         <li>First Place Winner, Machine Learning 4 Science Hackathon 2020</li>
                         <li>Research Fellowship Awardee, NASA L’Space NPWEE – Awarded $10,000 2020</li>
                     </ul>

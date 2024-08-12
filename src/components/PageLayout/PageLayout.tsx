@@ -55,7 +55,7 @@ const PageLayout = ({
                                                         "/resume";
                                                 }}
                                             />
-                                            <Button
+                                            {/* <Button
                                                 variant="ghost"
                                                 label="Projects"
                                                 onClick={() => {
@@ -71,7 +71,7 @@ const PageLayout = ({
                                                     window.location.href =
                                                         "/principles";
                                                 }}
-                                            />
+                                            /> */}
 
                                             {/* <Button
                                                 variant="ghost"
