@@ -51,6 +51,17 @@ const HamburgerMenu = () => {
                                 <Settings /> Resume
                             </Link>
                         </li>
+                        <li>
+                            <a href="/principles" >
+                                <Book /> Principles
+                            </a>
+                        </li>
+                        {/* <li>
+                            <a href="/blog" >
+                                <Book /> Blog
+                            </a>
+                        </li> */}
+
                     </ul>
                     <div className={styles.divider} />
                     <ul>

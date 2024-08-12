@@ -8,10 +8,9 @@ const ContactContent = ({ }: {}) => {
     return (
         <div className={styles.main}>
             <div className={styles.intro}>
-                {/* <p>Meet Molla</p> */}
                 <h1>Let's chat 🤝</h1>
                 <h2>
-                    I'm opening to meeting to discuss new opportunities.
+                    I'm open to meeting to discuss new opportunities.
                 </h2>
             </div>
             <div className={styles.meetButton}  >
@@ -26,7 +25,6 @@ const ContactContent = ({ }: {}) => {
             </div>
             <Divider />
             <div className={styles.intro}>
-                {/* <p>Meet Molla</p> */}
                 <h1>Other ways to reach me 📥</h1>
                 <h2>
                     Feel free to DM me through these platforms.

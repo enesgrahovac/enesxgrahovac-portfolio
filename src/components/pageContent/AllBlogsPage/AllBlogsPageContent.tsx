@@ -5,6 +5,7 @@ import { draftMode } from 'next/headers'
 import { notFound } from 'next/navigation'
 import { Suspense } from 'react'
 import { BlogCard } from '@/components/patterns/BlogCard/BlogCard'
+import styles from './AllBlogsPageContent.module.css'
 
 // Define the types explicitly for better clarity
 type PostItem = {
@@ -31,7 +32,7 @@ const BlogsPageContent = async () => {
     return (
         <Pump
             draft={isDraftMode}
-            next={{ tags: ['basehub'] }}
+            next={{tags: ['basehub'], revalidate: 60}}
             queries={[
                 {
                     blog: {
@@ -61,9 +62,7 @@ const BlogsPageContent = async () => {
                     notFound()
                     return null; // Ensure not to proceed
                 } 
-                
-                console.log('Data:', data.blog.posts)
-                
+                                
                 const items = data.blog.posts.items;
 
                 // Validate and ensure `items` is an array of PostItem
@@ -74,7 +73,7 @@ const BlogsPageContent = async () => {
                 }
 
                 return (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                    <div className={styles.gridContainer}>
                         {items.map((post) => (
                             <BlogCard
                                 key={post._id}
