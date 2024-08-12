@@ -63,6 +63,7 @@ const PageLayout = ({
                                                         "/projects";
                                                 }}
                                             />
+
                                             <Button
                                                 variant="ghost"
                                                 label="Principles"
@@ -80,6 +81,7 @@ const PageLayout = ({
                                                         "/blog";
                                                 }}
                                             /> */}
+
                                         </div>
 
                                         <Button
