@@ -1,6 +1,5 @@
 import styles from './PrincipleCard.module.css';
 import Image from 'next/image';
-import { RichText } from 'basehub/react-rich-text';
 import Link from 'next/link';
 
 type PrincipleCardProps = {
@@ -16,8 +15,6 @@ export const PrincipleCard: React.FC<PrincipleCardProps> = ({ id, title, snippet
      * Add type checks and console logs for better debugging. 
      * It's critical to check the shape and type of `content` and `projectStartDate`.
      */
-    console.log('PrincipleCard:', { id, title, snippet, slug });
-    console.log("type of snippet", typeof snippet)
 
     // const formattedContent = snippet.split('\n');
 

@@ -32,20 +32,21 @@ const ContactContent = ({ }: {}) => {
             </div>
             <Button
                 variant="ghost"
-                label="Twitter (X)"
-                icon={<Twitter />}
-                onClick={() => {
-                    window.open("https://twitter.com/enesgrahovac", "_blank");
-                }}
-            />
-            <Button
-                variant="ghost"
                 label="LinkedIn"
                 icon={<LucideLinkedin />}
                 onClick={() => {
                     window.open("https://www.linkedin.com/in/enes-grahovac-105/", "_blank");
                 }}
             />
+            <Button
+                variant="ghost"
+                label="Twitter (X)"
+                icon={<Twitter />}
+                onClick={() => {
+                    window.open("https://twitter.com/enesgrahovac", "_blank");
+                }}
+            />
+            
         </div>
     );
 };

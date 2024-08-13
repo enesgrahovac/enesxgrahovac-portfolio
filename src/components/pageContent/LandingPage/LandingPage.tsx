@@ -2,6 +2,9 @@ import React, { useEffect } from "react";
 // import PageLayout from "@/components/PageLayout/PageLayout";
 import styles from "./LandingPage.module.css";
 import enesHeadshot from "@/public/img/headshot_presentation.png";
+import enesGoat from "@/public/img/enes_goat.png";
+import enesAward from "@/public/img/enes_award.png";
+import enesFriends from "@/public/img/enes_rockclimbing.png";
 // import books from "@/public/img/books_tall_1.png";
 // import warAndPeace from "@/public/img/war_and_peace.png";
 import Image from "next/image";
@@ -21,7 +24,7 @@ const LandingPageContent = ({ }: {}) => {
                     <div className={styles.intro}>
                         <h1>Hello, I'm Enes 👋</h1>
                         <h2>
-                            I'm a software engineer with a passion for creating practical things that use Artificial Intelligence and Machine Learning to solve real-world problems.
+                            I'm an AI & software engineer passionately building amazing AI products 👨‍💻
                         </h2>
                     </div>
 
@@ -39,8 +42,53 @@ const LandingPageContent = ({ }: {}) => {
                             id={styles.darkAllow}
                         />
                         <div className={styles.exampleText}>
-                            <p>I'm currently working on boot-strapped AI web apps & looking for a full-time position as a software engineer.</p>
+                            <p>I've been working on AIML apps since 2017, and I'm currently looking for a new part-time or full-time position 🤝</p>
                         </div>
+                        <Image
+                            src={enesAward}
+                            alt='A photo of Enes Grahovac receiving his diploma for successfully completing the Dale Carnegie Public Speaking course.'
+                            className={styles.exampleImage}
+                            id={styles.lightAllow}
+                        />
+                        <Image
+                            src={enesAward}
+                            alt='A photo of Enes Grahovac receiving his diploma for successfully completing the Dale Carnegie Public Speaking course.'
+                            className={styles.exampleImage}
+                            id={styles.darkAllow}
+                        />
+                        <div className={styles.exampleText}>
+                            <p>I'm professionally and personally growth-driven. I want my next career move to be a long-lasting relationship with a growing and innovative company 📈</p>
+                        </div>
+                        <Image
+                            src={enesGoat}
+                            alt='A photo of Enes Grahovac at the peak of Mount Blue Sky in Colorado, a mountain goat is on the right.'
+                            className={styles.exampleImage}
+                            id={styles.lightAllow}
+                        />
+                        <Image
+                            src={enesGoat}
+                            alt='A photo of Enes Grahovac at the peak of Mount Blue Sky in Colorado, a mountain goat is on the right.'
+                            className={styles.exampleImage}
+                            id={styles.darkAllow}
+                        />
+                        <div className={styles.exampleText}>
+                            <p>Outside of invention, I love to travel, hike, and explore new places. AKA get off my computer and touch grass ⛰️</p>
+                        </div>
+
+                        <Image
+                            src={enesFriends}
+                            alt='A photo of Enes Grahovac at the peak of Mount Blue Sky in Colorado, a mountain goat is on the right.'
+                            className={styles.exampleImage}
+                            id={styles.lightAllow}
+                        />
+                        <Image
+                            src={enesFriends}
+                            alt='A photo of Enes Grahovac at the peak of Mount Blue Sky in Colorado, a mountain goat is on the right.'
+                            className={styles.exampleImage}
+                            id={styles.darkAllow}
+                        />
+                        <div className={styles.exampleText}><p>I ❤️ to spend time with family and friends.</p></div>
+                        
                     </div>
 
                     {/* <div className={styles.exampleSection}>
