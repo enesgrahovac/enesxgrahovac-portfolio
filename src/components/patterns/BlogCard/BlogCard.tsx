@@ -21,8 +21,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ id, title, coverImage, conte
      * Add type checks and console logs for better debugging. 
      * It's critical to check the shape and type of `content` and `publishDate`.
      */
-    console.log('BlogCard:', { id, title, coverImage, content, publishDate });
-    console.log("type of publish date", typeof publishDate)
+
     return (
         <div className={styles.card}>
             <div className={styles.imageWrapper}>

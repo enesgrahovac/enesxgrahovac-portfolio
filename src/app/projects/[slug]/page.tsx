@@ -10,7 +10,6 @@ type ProjectPageProps = {
 
 export default function ProjectPageRender({ params }: ProjectPageProps) {
   const { slug } = params;
-  console.log(params)
   // Ensure slug is available before rendering
   if (!slug || typeof slug !== 'string') {
     return <div>Loading...</div>;

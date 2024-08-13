@@ -17,8 +17,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ id, title, coverImage,
      * Add type checks and console logs for better debugging. 
      * It's critical to check the shape and type of `content` and `projectStartDate`.
      */
-    console.log('ProjectCard:', { id, title, coverImage, content, projectStartDate });
-    console.log("type of publish date", typeof projectStartDate)
+
     return (
         <div className={styles.card}>
             <div className={styles.imageWrapper}>
