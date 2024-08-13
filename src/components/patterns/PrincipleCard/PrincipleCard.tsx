@@ -1,6 +1,5 @@
 import styles from './PrincipleCard.module.css';
 import Image from 'next/image';
-import { RichText } from 'basehub/react-rich-text';
 import Link from 'next/link';
 
 type PrincipleCardProps = {
